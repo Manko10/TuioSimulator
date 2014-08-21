@@ -20,7 +20,7 @@ TUIO_SHARED  = libTUIO.so
 INCLUDES = -I./TUIO -I./oscpack
 CFLAGS  = -Wall -O3 $(SDL_CFLAGS) -fPIC
 LDFLAGS = -lpthread
-CXXFLAGS = $(CFLAGS) $(INCLUDES) -D$(ENDIANESS)
+CXXFLAGS = -std=c++11 $(CFLAGS) $(INCLUDES) -D$(ENDIANESS)
 SHARED_OPTIONS = -shared -Wl,-soname,$(TUIO_SHARED)
 
 ifeq ($(PLATFORM), Darwin)
